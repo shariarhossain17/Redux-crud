@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { useNavigate } from "react-router-dom";
 import '../Css/Home.css';
 import { addBooks } from './bookSlice';
 const AddBook = () => {
     const [title,setTitle] = useState('')
     const [author,setAuthor] = useState('')
+    const navigate = useNavigate()
     
     const state = useSelector(state => state.bookReducer.books)
     const dispatch = useDispatch()
@@ -16,6 +18,7 @@ const AddBook = () => {
             author
         }
         dispatch(addBooks(book))
+        navigate('/')
     }
     return (
         <div className='home'>

@@ -1,0 +1,9 @@
+.nav ul a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 10px;
+}
+.nav {
+  background-color: rgb(174, 120, 20);
+  padding: 5px 10px;
+}

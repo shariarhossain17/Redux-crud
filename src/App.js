@@ -1,9 +1,19 @@
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
+import AddBook from './Features/AddBook';
+import EditBook from './Features/EditBook';
+import Home from './Pages/Home';
+import Navbar from './Pages/Navbar';
 
 function App() {
   return (
     <div className="App">
-      <h1>Hello</h1>
+      <Navbar/>
+      <Routes>
+        <Route path='/' element={<Home/>}></Route>
+        <Route path='/add-book' element={<AddBook/>}></Route>
+        <Route path='/edit-book' element={<EditBook/>}></Route>
+      </Routes>
     </div>
   );
 }
